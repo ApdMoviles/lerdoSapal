@@ -1,10 +1,14 @@
 <ion-content>
-  <app-header></app-header>
+  <app-header backButton="/auth"></app-header>
   <app-logo></app-logo>
-  <h2 class="ion-text-center ion-no-margin">Login</h2>
+  <h2 class="ion-text-center ion-no-margin">Nuevo Usuario</h2>
   <div class="content">
     <div class="d-flex-center">
-      <form (keyup.enter)="submit()" (ngSubmit)="submit()" class="ion-text-center">
+      <form
+        (keyup.enter)="submit()"
+        (ngSubmit)="submit()"
+        class="ion-text-center"
+      >
         <app-custom-input
           [control]="form.controls.email"
           label="Correo"
@@ -50,7 +54,12 @@
 
         <div class="sign-up">
           <div>No tienes cuenta?</div>
-          <ion-button routerLink="sign-up" class="ion-margin-vertical" slot="end" shape="round">
+          <ion-button
+            routerLink="sign-up"
+            class="ion-margin-vertical"
+            slot="end"
+            shape="round"
+          >
             Registrate
             <ion-icon slot="end" name="person-add-outline"></ion-icon>
           </ion-button>

@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
+import { FormControl } from '@angular/forms';
 
 @Component({
   selector: 'app-custom-input',
@@ -7,8 +8,32 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CustomInputComponent  implements OnInit {
 
+  @Input() control: FormControl;
+  @Input() label: string;
+  @Input() icon: string;
+  @Input() type: string;
+  @Input() autocomplete: string;
+
+  isPasword: boolean;
+  hide: boolean = true;
+
   constructor() { }
 
-  ngOnInit() {}
+  ngOnInit() {
+    if(this.type == 'password') this.isPasword = true;
+
+  }
+
+
+  ocultaOMuestraContra(){
+    this.hide = !this.hide;
+
+
+    if (this.hide){
+      this.type = 'password'
+    }else{
+      this.type = 'text'
+    }
+  }
 
 }
