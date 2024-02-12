@@ -4,9 +4,9 @@ import { FormsModule } from '@angular/forms';
 
 import { IonicModule } from '@ionic/angular';
 
-import { TabsPageRoutingModule } from './tabs-routing.module';
+import { PagosPageRoutingModule } from './pagos-routing.module';
 
-import { TabsPage } from './tabs.page';
+import { PagosPage } from './pagos.page';
 import { SharedModule } from 'src/app/shared/shared.module';
 
 @NgModule({
@@ -14,9 +14,9 @@ import { SharedModule } from 'src/app/shared/shared.module';
     CommonModule,
     FormsModule,
     IonicModule,
-    TabsPageRoutingModule,
+    PagosPageRoutingModule, 
     SharedModule
   ],
-  declarations: [TabsPage]
+  declarations: [PagosPage]
 })
-export class TabsPageModule {}
+export class PagosPageModule {}

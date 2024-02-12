@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
+import { Router } from '@angular/router';
+import { NavController,AlertController, LoadingController, } from '@ionic/angular';
 
 @Component({
   selector: 'app-auth',
@@ -12,7 +14,7 @@ export class AuthPage implements OnInit {
     password: new FormControl('', [Validators.required]),
   });
 
-  constructor() {}
+  constructor(public navCtrl: NavController) {}
 
   ngOnInit() {}
 
@@ -21,5 +23,6 @@ export class AuthPage implements OnInit {
     if (this.form.valid) {
       console.log(this.form.value);
     }
+    this.navCtrl.navigateRoot("tabs/pagos");
   }
 }

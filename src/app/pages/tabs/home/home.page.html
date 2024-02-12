@@ -1,0 +1,157 @@
+<ion-content>
+  <app-header
+    class="ion-text-center ion-no-margin"
+    title="Lerdo SAPAL"
+  ></app-header>
+
+  <div class="content">
+    <section id="modulos" class="team">
+      <div class="ion-text-center">
+        <h2>ACERCA DE</h2>
+      </div>
+      <swiper-container
+        (slidechang)="swiperSlideChanged($event)"
+        [loop]="true"
+        [pagination]="true"
+      >
+        <swiper-slide
+          ><ion-card color="primary">
+            <ion-card-header>
+              <ion-card-title class="ion-text-center ion-no-margin"
+                >MISIÓN</ion-card-title
+              >
+            </ion-card-header>
+
+            <ion-card-content>
+              Brindar los servicios de agua potable, saneamiento y
+              aprovechamiento del agua tratada a la población del municipio de
+              lerdo Durango, con oportunidad y sustentabilidad
+            </ion-card-content>
+          </ion-card></swiper-slide
+        >
+
+        <swiper-slide
+          ><ion-card color="primary">
+            <ion-card-header>
+              <ion-card-title class="ion-text-center ion-no-margin"
+                >VISIÓN</ion-card-title
+              >
+            </ion-card-header>
+
+            <ion-card-content>
+              Adoptar las mejores prácticas a nivel mundial relacionadas con el
+              Suministro, Distribución y Consumo, Tratamiento y Reusó del agua
+              para garantizar la sustentabilidad del municipio de Lerdo Durango.
+            </ion-card-content>
+          </ion-card></swiper-slide
+        >
+
+        <!--  <swiper-slide><ion-card color="primary">
+            <ion-card-header>
+              <ion-card-title>Card Title</ion-card-title>
+            </ion-card-header>
+          
+            <ion-card-content> Card Content </ion-card-content>
+          </ion-card></swiper-slide> -->
+      </swiper-container>
+    </section>
+
+    <section id="modulos" class="team">
+      <div class="ion-text-center">
+        <h2>MODULOS DE PAGO</h2>
+      </div>
+
+      <swiper-container
+        (slidechang)="swiperSlideChanged($event)"
+        [loop]="true"
+        [pagination]="true"
+      >
+        <swiper-slide>
+          <ion-card>
+            <ion-card-content>
+              <iframe
+                width="320"
+                height="500"
+                frameborder="1"
+                scrolling="no"
+                marginheight="0"
+                marginwidth="0"
+                border-radius="15px"
+                src="https://maps.google.com/maps?width=400&amp;height=600&amp;hl=es&amp;q=25.55803847924994,%20-103.51583374151281+(SUCURSAL%20LAS%20CRUCES)&amp;t=k&amp;z=17&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"
+              >
+              </iframe>
+
+              <div class="ion-text-center card-modulos">
+                <ion-card-header>
+                  <ion-card-title>SUCURSAL LAS CRUCES</ion-card-title>
+                </ion-card-header>
+              </div>
+
+              <div class="ion-text-center">
+                <h5>DIRECCIÓN:</h5>
+                <p>
+                  CALZ. LAS CRUCES ESQ. FRESNOS, COL LOS LAURELES, LERDO
+                  DURANGO.
+                </p>
+                <h5>HORARIO:</h5>
+                <p>
+                  Lunes a Viernes: 8:30 A.M. - 14:00 P.M.<br />Sábados: 8:30
+                  A.M. - 12:00 P.M.
+                </p>
+              </div>
+            </ion-card-content>
+          </ion-card>
+        </swiper-slide>
+
+        <swiper-slide>
+          <ion-card>
+            <ion-card-content>
+              <iframe
+                width="320"
+                height="500"
+                frameborder="0"
+                scrolling="no"
+                marginheight="0"
+                marginwidth="0"
+                src="https://maps.google.com/maps?width=400&amp;height=600&amp;hl=es&amp;q=25.496195544664733,%20-103.59538880617094+(SUCURSAL%20CIUDAD%20JUAREZ)&amp;t=k&amp;z=17&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"
+              >
+              </iframe>
+              <div class="ion-text-center">
+                <ion-card-header>
+                  <ion-card-title>SUCURSAL CIUDAD JUÁREZ</ion-card-title>
+                </ion-card-header>
+              </div>
+
+              <div class="ion-text-center">
+                <h5>DIRECCIÓN:</h5>
+                <p> CALLE HIDALGO 53, JUÁREZ, 35180 CD JUÁREZ, DGO.</p>
+                <h4>HORARIO:</h4>
+                <p>Lunes a Viernes: 8:30 A.M. -  14:00 P.M.<br>Sábados: 8:30 A.M. -  12:00 P.M.</p>
+              </div>
+            </ion-card-content>
+          </ion-card>
+        </swiper-slide>
+
+        <swiper-slide>
+          <ion-card>
+            <ion-card-header>
+              <ion-card-title>SUCURSAL CENTRO</ion-card-title>
+            </ion-card-header>
+            <ion-card-content>
+              <iframe
+                width="320"
+                height="500"
+                frameborder="0"
+                scrolling="no"
+                marginheight="0"
+                marginwidth="0"
+                src="https://maps.google.com/maps?width=400&amp;height=600&amp;hl=es&amp;q=25.536218593263083,%20-103.52525894261878+(SUCURSAL%20BELISARIO%20DOMINGUEZ)&amp;t=k&amp;z=17&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"
+              >
+              </iframe>
+            </ion-card-content>
+          </ion-card>
+        </swiper-slide>
+      </swiper-container>
+    </section>
+  </div>
+</ion-content>

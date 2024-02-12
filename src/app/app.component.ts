@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
 import { ThemeService } from './services/theme.service';
+import {register} from 'swiper/element/bundle'
+register();
 
 @Component({
   selector: 'app-root',
