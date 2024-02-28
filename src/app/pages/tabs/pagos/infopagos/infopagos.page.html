@@ -1,0 +1,74 @@
+<ion-content >
+  <app-header backButton="/tabs/pagos"></app-header>
+  <div class="content">
+    <section id="modulos" class="team">
+     <ion-card color="medium">
+      <ion-card-header>
+        <ion-card-title class="ion-text-center ion-no-margin">
+          <h4>PAGO DEL SERVICIO DE AGUA Y ALCANTARILLADO DEL MUNICIPIO DE LERDO, DGO.</h4>
+        </ion-card-title>
+      </ion-card-header>
+      <ion-card-content>
+        <form
+        (keyup.enter)="submit()"
+        (ngSubmit)="submit()"
+        class="ion-text-center">
+        <ion-card-content color="light" style="border: 1px solid var(--ion-color-secondary); margin-bottom: 20px;">
+          <h2 style="text-align: center; padding-top: 17px;"><b>INFORMACIÓN A PAGAR:</b></h2>
+          <div class="separacion">
+            <h3 style="padding-bottom: 10px;"><b>No. CUENTA:</b> {{clave}}</h3>
+            <h3 style="padding-bottom: 10px;"><b>No. RECIBO:</b> {{recibo}}</h3>
+            <h3 style="padding-bottom: 10px;"><b>CUDADANO:</b> {{ciudadano}}</h3>
+            <h3 style="padding-bottom: 10px;"><b>DIRECCIÓN:</b> {{direccion}}</h3>
+            <h3 style="padding-bottom: 10px;"><b>COLONIA:</b> {{colonia}}</h3>
+            <h3 style="padding-bottom: 10px;"><b>CIUDAD:</b> {{ciudad}}</h3>
+            <h3 style="padding-bottom: 10px;"><b>ESTADO:</b> {{estado}}</h3>
+            <h3 style="padding-bottom: 10px;"><b>PERIODO:</b> {{periodo}}</h3>
+            <h3 style="padding-bottom: 10px;"><b>ESTATUS:</b> {{estatus}}</h3>
+          </div>
+          <h2 style="padding-bottom: 8px; text-align: center;"><b>CONCEPTOS:</b></h2>
+          <div class="separacion">
+            <h3 style="padding-bottom: 8px; text-align: left;"><b>ADEUDOS:</b>{{adeudos | currency}}</h3>
+            <h3 style="padding-bottom: 8px; text-align: left;"><b>EXTRACCIÓN:</b>{{extraccion | currency}}</h3>
+            <h3 style="padding-bottom: 8px; text-align: left;"><b>USO DE DRENAJE:</b> {{uso_drenaje | currency}}</h3>
+            <h3 style="padding-bottom: 10px; text-align: left;"><b>RECARGOS:</b>{{recargos | currency}}</h3>
+            <h3 style="padding-bottom: 10px; text-align: left;"><b>SUBSIDIO:</b>{{subsidio | currency}}</h3>
+            <h3 style="padding-bottom: 10px; text-align: left;"><b>DESCUENTO INSEN:</b>{{descuento_insen | currency}}</h3>
+            <h3 style="padding-bottom: 10px; text-align: left;"><b>CRÉDITO POR REDONDEO:</b> {{credito_redondeo | currency}}</h3>
+            <h3 style="padding-bottom: 10px; text-align: left;"><b>CÁRGO POR REDONDEO:</b>{{cargo_redondeo | currency}} </h3>
+          </div>
+          <div id="passwordHelpBlock"  style ="text-align: justify;" ><b> <br> {{mensaje}}</b>
+          </div>
+          <div class="separacion right">
+            <h3 style="padding-right: 20px; padding-bottom: 10px; text-align: right;"><b>SUBTOTAL: {{subtotal | currency}}</b></h3>
+            <h3 style="padding-right: 20px; padding-bottom: 10px; text-align: right;"><b>DESCUENTO: {{descuento | currency}}</b></h3>
+            <h3 style="padding-right: 20px; padding-bottom: 10px; text-align: right;"><b>PAGO CONVENIO: {{pag_convenio | currency}}</b></h3>
+            <h3 style="padding-right: 20px; padding-bottom: 10px; text-align: right;"><b>TOTAL: {{total | currency}}</b></h3>
+          </div>
+          <!--<h3 style="color: black; padding-right: 20px; padding-bottom: 10px; text-align: right;"><b>SUBTOTAL: {{total | currency}}</b></h3> -->
+          
+
+          <hr>
+          <div class="row">
+            <div class="col-sm-6" style="text-align: center;">
+              <h2 *ngIf="isPagado" class="ion-padding text-dark">Recibo pagado</h2>
+              <ion-button
+              *ngIf="!isPagado"
+              class="ion-margin-vertical"
+              shape="round"
+              routerLink="infopagos"
+              (click)="pagar()"
+            >
+            PAGAR
+              <ion-icon slot="end" name="card"></ion-icon>
+            </ion-button>
+            </div>
+            <br>
+          </div>
+        </ion-card-content>
+      </form>
+      </ion-card-content>
+    </ion-card>
+    </section>
+  </div>
+</ion-content>

@@ -17,6 +17,10 @@ export class TabsPage implements OnInit {
   ) {}
 
   ngOnInit() {}
+  
+  goToqr(){
+    this.navCtrl.navigateBack('tabs/qr');
+  }
 
   async ingresar() {
   

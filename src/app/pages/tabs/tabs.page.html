@@ -1,16 +1,30 @@
-<ion-tabs>
-  <ion-tab-bar slot="bottom">
+<ion-tabs>  
+
+  <ion-fab vertical="bottom" horizontal="center" translucent="true">
+    <ion-fab-button (click)="goToqr()">
+      <ion-icon name="qr-code"></ion-icon>
+    </ion-fab-button>
+  </ion-fab>
+  
+  <ion-tab-bar slot="bottom" class="ion-no-border">
     <ion-tab-button tab="home">
-      <ion-icon name="home-outline"></ion-icon>
-      <ion-label>Inicio</ion-label>
+      <ion-icon name="home"></ion-icon>
     </ion-tab-button>
-    <ion-tab-button tab="pagos" (click)="ingresar()">
-      <ion-icon name="cash-outline"></ion-icon>
-      <ion-label>Pagos</ion-label>
+
+    <ion-tab-button tab="pagos" class="comments">
+      <ion-icon name="card"></ion-icon>
+
     </ion-tab-button>
-   <!--  <ion-tab-button tab="tab3">
-      <ion-icon name="send"></ion-icon>
-      <ion-label>Tab Three</ion-label>
-    </ion-tab-button> -->
+
+    <svg height="50" viewBox="0 0 100 50" width="100" xmlns="http://www.w3.org/2000/svg"><path d="M100 0v50H0V0c.543 27.153 22.72 49 50 49S99.457 27.153 99.99 0h.01z" fill="red" fill-rule="evenodd"></path></svg>
+
+    <ion-tab-button tab="armonizacion" class="notifs">
+      <ion-icon name="book"></ion-icon>
+      <!-- <ion-badge></ion-badge> -->
+    </ion-tab-button>
+
+    <ion-tab-button tab="facturacion">
+      <ion-icon name="document-attach"></ion-icon>
+    </ion-tab-button>
   </ion-tab-bar>
 </ion-tabs>

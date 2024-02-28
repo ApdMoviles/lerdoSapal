@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { FormControl, FormGroup, Validators } from '@angular/forms';
+import { NavController,AlertController, LoadingController, } from '@ionic/angular';
 
 @Component({
   selector: 'app-pagos',
@@ -6,10 +8,13 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./pagos.page.scss'],
 })
 export class PagosPage implements OnInit {
-
-  constructor() { }
+  form = new FormGroup({
+    name: new FormControl('', [Validators.required, Validators.minLength(4)]),
+  });
+  constructor(public navCtrl: NavController) { }
 
   ngOnInit() {
   }
-
+  
+  
 }

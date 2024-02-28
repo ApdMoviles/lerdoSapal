@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { CustomValidators } from 'src/app/utils/custom-validators';
-
+import { NavController,AlertController, LoadingController, } from '@ionic/angular';
 @Component({
   selector: 'app-sign-up',
   templateUrl: './sign-up.page.html',
@@ -15,7 +15,7 @@ export class SignUpPage implements OnInit {
     confirmPassword: new FormControl(''),
   });
 
-  constructor() { }
+  constructor(public navCtrl: NavController) { }
 
   ngOnInit() {
     this.confirmPasswordValidator()
@@ -34,6 +34,7 @@ export class SignUpPage implements OnInit {
     if (this.form.valid) {
       console.log(this.form.value);
     }
+    this.navCtrl.navigateRoot("auth");
   }
 
 }

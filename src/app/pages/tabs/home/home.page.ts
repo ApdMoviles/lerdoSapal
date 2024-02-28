@@ -9,6 +9,8 @@ export class HomePage implements OnInit {
 
   constructor() { }
 
+  showOverlay: boolean = true;
+
   ngOnInit() {
   }
 

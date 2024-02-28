@@ -1,5 +1,6 @@
 <ion-content>
   <app-header
+    perfil="/tabs/perfil"
     class="ion-text-center ion-no-margin"
     title="Lerdo SAPAL"
   ></app-header>
@@ -68,8 +69,14 @@
       >
         <swiper-slide>
           <ion-card>
-            <ion-card-content>
-              <iframe
+            <ion-card-header style="text-align: center;">
+              <ion-card-title>
+                <h3>SUCURSAL LAS CRUCES</h3>
+              </ion-card-title>
+            </ion-card-header>
+            <ion-card-content class="ModulosContent">
+              <div class="iframe-container">
+                <iframe
                 width="320"
                 height="500"
                 frameborder="1"
@@ -78,15 +85,13 @@
                 marginwidth="0"
                 border-radius="15px"
                 src="https://maps.google.com/maps?width=400&amp;height=600&amp;hl=es&amp;q=25.55803847924994,%20-103.51583374151281+(SUCURSAL%20LAS%20CRUCES)&amp;t=k&amp;z=17&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"
-              >
+                >
               </iframe>
-
-              <div class="ion-text-center card-modulos">
-                <ion-card-header>
-                  <ion-card-title>SUCURSAL LAS CRUCESss</ion-card-title>
-                </ion-card-header>
+              <div
+              class="overlay"
+              *ngIf="showOverlay"
+            ></div>
               </div>
-
               <div class="ion-text-center">
                 <h5>DIRECCIÓN:</h5>
                 <p>
@@ -105,8 +110,14 @@
 
         <swiper-slide>
           <ion-card>
-            <ion-card-content>
-              <iframe
+            <ion-card-header style="text-align: center;">
+              <ion-card-title>
+                <h3>SUCURSAL CIUDAD JUÁREZ</h3>
+              </ion-card-title>
+            </ion-card-header>
+            <ion-card-content class="ModulosContent">
+              <div class="iframe-container">
+                <iframe
                 width="320"
                 height="500"
                 frameborder="0"
@@ -116,12 +127,11 @@
                 src="https://maps.google.com/maps?width=400&amp;height=600&amp;hl=es&amp;q=25.496195544664733,%20-103.59538880617094+(SUCURSAL%20CIUDAD%20JUAREZ)&amp;t=k&amp;z=17&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"
               >
               </iframe>
-              <div class="ion-text-center">
-                <ion-card-header>
-                  <ion-card-title>SUCURSAL CIUDAD JUÁREZ</ion-card-title>
-                </ion-card-header>
+              <div
+              class="overlay"
+              *ngIf="showOverlay"
+            ></div>
               </div>
-
               <div class="ion-text-center">
                 <h5>DIRECCIÓN:</h5>
                 <p> CALLE HIDALGO 53, JUÁREZ, 35180 CD JUÁREZ, DGO.</p>
@@ -134,11 +144,14 @@
 
         <swiper-slide>
           <ion-card>
-            <ion-card-header>
-              <ion-card-title>SUCURSAL CENTRO</ion-card-title>
+            <ion-card-header style="text-align: center;">
+              <ion-card-title>
+                <h3>SUCURSAL CENTRO</h3>
+              </ion-card-title>
             </ion-card-header>
-            <ion-card-content>
-              <iframe
+            <ion-card-content class="ModulosContent">
+              <div class="iframe-container">
+                <iframe
                 width="320"
                 height="500"
                 frameborder="0"
@@ -148,6 +161,18 @@
                 src="https://maps.google.com/maps?width=400&amp;height=600&amp;hl=es&amp;q=25.536218593263083,%20-103.52525894261878+(SUCURSAL%20BELISARIO%20DOMINGUEZ)&amp;t=k&amp;z=17&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"
               >
               </iframe>
+              <div
+              class="overlay"
+              *ngIf="showOverlay"
+            ></div>
+              </div>
+              <div class="ion-text-center">
+                <h5>DIRECCIÓN:</h5>
+                <p>PROL. ALLENDE COL. CENTRO NUMERO 75, LERDO DURANGO.</p>
+                <h4>HORARIO:</h4>
+                <p>Lunes a Viernes: 8:30 A.M. -  14:00 P.M.<br>Sábados: 8:30 A.M. -  12:00 P.M.</p>
+              </div>
+              
             </ion-card-content>
           </ion-card>
         </swiper-slide>

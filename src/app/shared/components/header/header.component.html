@@ -1,25 +1,31 @@
 <ion-header class="ion-no-border">
   <ion-toolbar [color]="color ? color : 'primary'">
-    <ion-buttons *ngIf="backButton" slot="start">
-      <!-- ==== cerrar modal  ==== -->
-      <ion-button *ngIf="isModal">
-        <ion-icon name="close-circle-outline"></ion-icon>
+    
+
+    <div>
+      <ion-buttons style="padding-left: 15px;" slot="start">
+        <ion-back-button icon="arrow-back-circle" text="" *ngIf="backButton" color="secondary" [defaultHref]="backButton"></ion-back-button>
+
+        <ion-back-button icon="person-circle" text=""  *ngIf="perfil" color="secondary" [defaultHref]="perfil">
+        </ion-back-button>
+
+        <div style="width: 25px;" *ngIf="transparent">
+        </div>
+      </ion-buttons>
+
+      <img src="assets/hero-logo.png" alt="">
+      
+      <ion-buttons style="padding-right:15px;" slot="end"> 
+      <ion-button (click)="setTheme(false)" *ngIf="darkMode.value && !click">
+        <ion-icon ngClass="darkMode.value && click : animacionDarkMode" name="sunny"></ion-icon>
       </ion-button>
 
-      <!-- ==== back button  ==== -->
-        <ion-back-button [defaultHref]="backButton"></ion-back-button>
+      <ion-button (click)="setTheme(true)"  *ngIf="!darkMode.value && !click">
+      <ion-icon ngClass="!darkMode.value && click: animacionDarkMode" name="moon"></ion-icon>
+      </ion-button>
     </ion-buttons>
+    </div>
 
-    <ion-title *ngIf="title" [ngClass]="{'ion-text-center': centerTitle}">{{title}}</ion-title>
-
-    <ion-buttons slot="end"> 
-      <ion-button (click)="setTheme(false)" *ngIf="darkMode.value">
-        <ion-icon name="sunny-outline"></ion-icon>
-      </ion-button>
-
-      <ion-button (click)="setTheme(true)"  *ngIf="!darkMode.value">
-      <ion-icon  name="moon-outline"></ion-icon>
-      </ion-button>
-    </ion-buttons>
+    
   </ion-toolbar>
 </ion-header>

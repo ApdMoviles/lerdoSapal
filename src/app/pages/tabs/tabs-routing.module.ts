@@ -15,6 +15,22 @@ const routes: Routes = [
       {
         path: 'pagos',
         loadChildren: () => import('./pagos/pagos.module').then( m => m.PagosPageModule)
+      },
+      {
+        path: 'armonizacion',
+        loadChildren: () => import('./armonizacion/armonizacion.module').then( m => m.ArmonizacionPageModule)
+      },
+      {
+        path: 'facturacion',
+        loadChildren: () => import('./facturacion/facturacion.module').then( m => m.FacturacionPageModule)
+      },
+      {
+        path: 'qr',
+        loadChildren: () => import('./qr/qr.module').then( m => m.qrPageModule)
+      },
+      {
+        path: 'perfil',
+        loadChildren: () => import('./perfil/perfil.module').then( m => m.perfilPageModule)
       }
     ]
   },

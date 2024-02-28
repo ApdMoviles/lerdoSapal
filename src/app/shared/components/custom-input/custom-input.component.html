@@ -1,10 +1,22 @@
-<ion-item class="ion-margin-vertical">
+<!-- <ion-item class="ion-margin-vertical">
   <ion-icon color="primary" *ngIf="icon" slot="start" [name]="icon" ></ion-icon>
   <ion-label position="floating"> {{label}}</ion-label>
   <ion-input debounce="500" [autocomplete]="autocomplete" [type]="type" [formControl]="control"></ion-input>
   <ion-buttons *ngIf="isPasword" slot="end">
     <ion-button (click)="ocultaOMuestraContra()">
-      <ion-icon color="primary" [name]="hide ? 'eye-outline' : 'eye-off-outline'"></ion-icon>
+      <ion-icon color="primary" [name]="hide ? 'eye' : 'eye-off'"></ion-icon>
     </ion-button>
   </ion-buttons>
-</ion-item>
+</ion-item> -->
+
+
+  <ion-item class="ion-margin-vertical">
+    <ion-input labelPlacement="stacked" debounce="500" [label]="label" [autocomplete]="autocomplete" [type]="type" [formControl]="control">
+      <ion-icon color="primary" *ngIf="icon" slot="start" [name]="icon"></ion-icon>
+      <ion-buttons *ngIf="isPasword" slot="end">
+        <ion-button (click)="ocultaOMuestraContra()">
+          <ion-icon color="primary" [name]="hide ? 'eye' : 'eye-off'"></ion-icon>
+        </ion-button>
+      </ion-buttons>
+    </ion-input>
+  </ion-item>
