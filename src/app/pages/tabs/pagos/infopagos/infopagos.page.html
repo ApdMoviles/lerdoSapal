@@ -10,8 +10,6 @@
       </ion-card-header>
       <ion-card-content>
         <form
-        (keyup.enter)="submit()"
-        (ngSubmit)="submit()"
         class="ion-text-center">
         <ion-card-content color="light" style="border: 1px solid var(--ion-color-secondary); margin-bottom: 20px;">
           <h2 style="text-align: center; padding-top: 17px;"><b>INFORMACIÓN A PAGAR:</b></h2>
@@ -56,7 +54,6 @@
               *ngIf="!isPagado"
               class="ion-margin-vertical"
               shape="round"
-              routerLink="infopagos"
               (click)="pagar()"
             >
             PAGAR

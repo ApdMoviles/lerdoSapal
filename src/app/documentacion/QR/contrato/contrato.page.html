@@ -1,0 +1,65 @@
+<ion-content>   
+  <div class="container2">
+    <img src="assets/img/logo.png" alt="SAPAL" width="180px" height="130px" class="logo-left">
+    <img src="https://grupoapd.mx/assets/img/logo.png" alt="SAPAL" width="180px" height="130px" class="logo-right">
+  </div>
+
+
+  <div class="employee-card" *ngIf="correcto">
+    <img class="employee-photo" *ngIf="foto==null || foto ==''" src="assets/img/user_empleado.png" alt="Foto del empleado">
+    <!-- <img class="employee-photo" *ngIf="!foto==null || !foto == ''" src="data:image/jpg;base64,{{foto}}" alt="Foto del empleado"> -->
+    
+    <h2 class="employee-name"><u>EMPLEADO: </u>{{nombre_empleado}}</h2>
+    <p class="employee-info"><u>CLAVE:</u> {{clave}}</p>
+    <p class="employee-info"><u>DEPARTAMENTO:</u> {{departamento}}</p>
+    <p class="employee-info"><u>PUESTO:</u> {{puesto}}</p>
+    <p class="employee-info"><u>TELEFONO :</u> {{telefono}}</p>
+
+
+<p class="employee-info"><u>ESTATUS :</u></p>
+<p class="employee-info" style="color: green;font-size: 50px;" *ngIf="activo">{{estatus}}</p>
+<p class="employee-info" style="color: red;font-size: 50px;"*ngIf="baja">{{estatus}}</p>
+ <!--<button class="view-profile-btn">Ver Perfil</button>-->
+ <div class="qr-container" *ngIf="qr">
+  <canvas #qrCanvas></canvas>
+</div>
+</div>
+
+
+
+
+<div class="employee-card2" *ngIf="error">
+  <img class="employee-photo" src="assets/img/user_error.png" alt="Foto del empleado">
+ <br><br>
+  <h1 class="employee-name2"><u>EMPLEADO: </u>¡INVALIDO!</h1>
+  <h1 class="employee-info"style = "color:red">DATOS DEL EMPLEADO MAL CAPTURADO/ERROR EN EL PROCESO</h1>
+  <p class="employee-info" style = "color:red">QR:</p>
+  <img class="employee-photo" src="assets/img/tacha.png" alt="Foto del empleado">
+</div>
+
+</ion-content>
+  <footer id="footer"> 
+    <div class="footer-top"> 
+      <div class="container"> 
+        <div class="row justify-content-center">
+          <div class="col-lg-6"> 
+            <h3>Lerdo SAPAL</h3> 
+          </div>
+        </div> 
+      </div>
+    </div> 
+    <div class="container footer-bottom clearfix">
+      <div class="copyright">
+        &copy; Derechos reservados, <strong><span>SAPAL</span></strong>. Lerdo Durango
+      </div>
+      <div class="credits"> 
+        Desarrollado por <a href="https://grupoapd.mx/" style="color: #FFFFFF; text-decoration: none;">APD Consultores en Tecnologías.</a>
+      </div>
+    </div>
+  </footer>
+
+
+
+
+
+

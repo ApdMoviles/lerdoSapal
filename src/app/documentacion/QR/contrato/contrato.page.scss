@@ -1,0 +1,94 @@
+.employee-card {
+    width: auto;
+    height: auto;
+    border-radius: 20px;
+    background-color: #f5f5f5;
+    box-shadow: 2px 2px 5px #ccc;
+    padding: 20px;
+    margin: 20px;
+
+    /*background-image: url('https://responsabilidadsocial.net/wp-content/uploads/2021/12/agua-que-es-definicion-caracteristicas-e-importancia.jpg');
+      background-image: url('https://png.pngtree.com/thumb_back/fw800/background/20200414/pngtree-gradient-blue-swimming-pool-water-ripple-background-image_333845.jpg');*/
+    background-image: url('https://images2.alphacoders.com/851/thumb-1920-85170.jpg');
+  
+    background-repeat: no-repeat;
+    background-size:cover;
+    background-position: center;
+}
+.employee-card2 {
+  width: auto;
+  height: 80%;
+  border-radius: 20px;
+  background-color: #f5f5f5;
+  box-shadow: 2px 2px 5px #ccc;
+  padding: 20px;
+  margin: 20px;
+
+  /*background-image: url('https://responsabilidadsocial.net/wp-content/uploads/2021/12/agua-que-es-definicion-caracteristicas-e-importancia.jpg');*/
+  background-image: url('https://i.blogs.es/c53b83/la-sequia-se-extiende-en-mexico-ya-son-770-municipios-con-algun-tipo-de-sequia-y-la-situacion-en-nuevo-leon-solo-empeora/1366_2000.jpeg');
+  background-repeat: no-repeat;
+  background-size:cover;
+  background-position: center;
+}
+
+.qr-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  canvas {
+    width: 100%;
+    height: 100%;
+}  
+.container2 {
+  display: flex;
+  justify-content: space-between;
+}
+
+.logo-left {
+  float: left;
+}
+
+.logo-right {
+  float: right;
+}
+
+.employee-photo {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    margin: 0 auto;
+    display: block;
+    object-fit: cover;
+}
+
+.employee-name {
+    font-size: 22px;
+    color: #000000;
+    text-align: center;
+    margin-top: 20px;
+}
+.employee-name2 {
+  font-size: 22px;
+  color: #ffffff;
+  text-align: center;
+  margin-top: 20px;
+}
+.employee-info {
+    font-size: 18px;
+    color: #000000;
+    text-align: center;
+    margin-top: 10px;
+}
+.view-profile-btn {
+    width: 80%;
+    height: 40px;
+    background-color: #337ab7;
+    color: #fff;
+    font-size: 18px;
+    border-radius: 20px;
+    margin: 20px auto;
+    display: block;
+    border: none;
+    cursor: pointer;
+}

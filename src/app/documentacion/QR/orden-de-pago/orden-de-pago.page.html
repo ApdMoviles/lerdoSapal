@@ -1,0 +1,175 @@
+<ion-content>   
+  <ion-grid  class="employee-card"style="background: url(../assets/img/3.jpg) 0 0/100% 100% no-repeat;"  *ngIf="corte_default">
+    <ion-row>
+      <ion-col size="12">
+        <div class=" ion-text-center">
+          <img class="ion-text-center" alt="200*200" height="130" width="165" src="assets/img/hero-logo.png"/> 
+        </div>
+      </ion-col>    
+       <ion-col style="text-align: center;">
+          <h2 class="info">CÓDIGO QR :</h2>
+          <!--<img src="{{Qr_imagen}}" alt="" width="300px" height="250px">-->
+          <img  src="data:image/jpg;base64,{{Qr_imagen}}"alt="" width="120px" height="100px"  >
+          <br>   
+            <div class="box" data-aos-delay="100">
+              <p class="info"><b>VALIDACIÓN</b></p>
+              <p class="info paragraph" style="color:greenyellow">¡VÁLIDO!</p>              
+               <p class="info paragraph"><u>SUPERVISOR:</u><br>{{supervisor}}</p>    
+               <p class="info paragraph"><u>FECHA:</u><br><b>{{FECHA}}</b></p>
+               <p class="info paragraph"><u>DEPARTAMENTO:</u><br>{{departamento}}</p>
+               <p class="info paragraph"><u>CORTES:</u><br><b>{{corte}}</b></p>
+               <strong><p class="info paragraph"><u>ESTATUS:</u> <br>{{ESTATUS}}</p></strong>
+            <!-- <a href="https://apir.grupoapd.mx/Recibos/{{archivo}}.pdf" Target="_blank" *ngIf="is_recibo"><ion-button expand="block">VER/DESCARGAR RECIBO</ion-button></a>
+             <a href="https://apir.grupoapd.mx/documentacion/QR/{{archivo}}.pdf" Target="_blank" *ngIf="is_recibo"><ion-button expand="block">VER/DESCARGAR RECIBO</ion-button></a>-->    
+            <!--<ion-button expand="block" (click)="login()" >IR A PAGAR</ion-button>
+             <a href="https://apir.grupoapd.mx/documentacion/QR/{{archivo}}.pdf" Target="_blank" ><ion-button expand="block" color="tertiary">DESCARGAR PDF</ion-button></a>--> 
+            <img src="assets/img/apd_reducida.png" alt="" width="150px" height="80px" class="image_ezeq">
+            </div>
+            </ion-col>      
+    </ion-row>
+    </ion-grid>
+
+
+
+    <ion-grid  class="employee-card"style="background: url(../assets/img/3.jpg) 0 0/100% 100% no-repeat;"  *ngIf="corte_jefe">
+      <ion-row>
+        <ion-col size="12">
+          <div class=" ion-text-center">
+            <img class="ion-text-center" alt="200*200" height="130" width="165" src="assets/img/hero-logo.png"/> 
+          </div>
+        </ion-col>    
+         <ion-col style="text-align: center;">
+            <h2 class="info">CÓDIGO QR :</h2>
+            <!--<img src="{{Qr_imagen}}" alt="" width="300px" height="250px">-->
+            <img  src="data:image/jpg;base64,{{Qr_imagen}}"alt="" width="120px" height="100px"  >
+            <br>   
+              <div class="box" data-aos-delay="100">
+                <p class="info"><b>VALIDACIÓN</b></p>
+                <p class="info paragraph" style="color:greenyellow">¡VÁLIDO!</p>              
+                <p class="info paragraph"><u>SUPERVISOR:</u><br>{{supervisor}}</p>    
+                <p class="info paragraph"><u>FECHA:</u><br><b>{{FECHA}}</b></p>
+                <p class="info paragraph"><u>CONTABILIDAD:</u><br>{{contabilidad}}</p>
+                <p class="info paragraph"><u>CORTES:</u><br><b>{{corte}}</b></p>
+                <strong><p class="info paragraph"><u>ESTATUS:</u> <br>{{ESTATUS}}</p></strong>
+              <!-- <a href="https://apir.grupoapd.mx/Recibos/{{archivo}}.pdf" Target="_blank" *ngIf="is_recibo"><ion-button expand="block">VER/DESCARGAR RECIBO</ion-button></a>
+               <a href="https://apir.grupoapd.mx/documentacion/QR/{{archivo}}.pdf" Target="_blank" *ngIf="is_recibo"><ion-button expand="block">VER/DESCARGAR RECIBO</ion-button></a>-->    
+              <!--<ion-button expand="block" (click)="login()" >IR A PAGAR</ion-button>
+               <a href="https://apir.grupoapd.mx/documentacion/QR/{{archivo}}.pdf" Target="_blank" ><ion-button expand="block" color="tertiary">DESCARGAR PDF</ion-button></a>--> 
+              <img src="assets/img/apd_reducida.png" alt="" width="150px" height="80px" class="image_ezeq">
+              </div>
+              </ion-col>      
+      </ion-row>
+      </ion-grid>
+
+
+<!------------------------------DISEÑO PARA SORTEO----------------------------------------------------->
+
+<ion-grid  class="employee-card"style="background: url(../assets/img/3.jpg) 0 0/100% 100% no-repeat;"  *ngIf="sorteo">
+  <ion-row>
+    <ion-col size="12">
+      <div class=" ion-text-center">
+        <img class="ion-text-center" alt="200*200" height="130" width="165" src="assets/img/hero-logo.png"/> 
+      </div>
+    </ion-col>    
+     <ion-col style="text-align: center;">
+        <h2 class="info">CÓDIGO QR :</h2>
+        <!--<img src="{{Qr_imagen}}" alt="" width="300px" height="250px">-->
+        <img  src="data:image/jpg;base64,{{Qr_imagen}}"alt="" width="120px" height="100px"  >
+        <br>   
+          <div class="box" data-aos-delay="100">
+            <p class="info"><b>VALIDACIÓN</b></p>
+            <p class="info paragraph"> <u>FOLIO:</u><br>{{FOLIO}}</p> 
+            <p class="info paragraph" style="color:greenyellow">¡FELICIDADES!<br>YA ESTAS PARTICIPANDO EN EL SORTEO DE SAPAL,TE DESEAMOS SUERTE :D</p>  
+             <p class="info paragraph"><u>CONCEPTO:</u><br>{{DOCUMENTO}}</p>    
+             <p class="info paragraph"><u>CUENTA PARTICIPANTE:</u><br>{{CIUDADADANO}}</p>
+           
+          <!-- <a href="https://apir.grupoapd.mx/Recibos/{{archivo}}.pdf" Target="_blank" *ngIf="is_recibo"><ion-button expand="block">VER/DESCARGAR RECIBO</ion-button></a>
+           <a href="https://apir.grupoapd.mx/documentacion/QR/{{archivo}}.pdf" Target="_blank" *ngIf="is_recibo"><ion-button expand="block">VER/DESCARGAR RECIBO</ion-button></a>-->    
+          <!--<ion-button expand="block" (click)="login()" >IR A PAGAR</ion-button>
+           <a href="https://apir.grupoapd.mx/documentacion/QR/{{archivo}}.pdf" Target="_blank" ><ion-button expand="block" color="tertiary">DESCARGAR PDF</ion-button></a>--> 
+          <img src="assets/img/apd_reducida.png" alt="" width="150px" height="80px" class="image_ezeq">
+          </div>
+          </ion-col>      
+  </ion-row>
+  </ion-grid>
+
+<!-- <ion-grid  class="employee-card"style="background: url(../assets/img/fondo_agua.png) 0 0/100% 100% no-repeat;"  >-->
+    <ion-grid  class="employee-card"style="background: url(../assets/img/3.jpg) 0 0/100% 100% no-repeat;"  *ngIf="correcto">
+    <ion-row>
+      <ion-col size="12">
+        <div class=" ion-text-center">
+          <img class="ion-text-center" alt="200*200" height="130" width="165" src="assets/img/hero-logo.png"/> 
+        </div>
+      </ion-col>    
+       <ion-col style="text-align: center;">
+          <h2 class="info">CÓDIGO QR :</h2>
+          <!--<img src="{{Qr_imagen}}" alt="" width="300px" height="250px">-->
+          <img  src="data:image/jpg;base64,{{Qr_imagen}}"alt="" width="120px" height="100px"  >
+          <br>   
+            <div class="box" data-aos-delay="100">
+              <p class="info"><b>VALIDACIÓN</b></p>
+              <p class="info paragraph"> <u>FOLIO:</u><br>{{FOLIO}}</p> 
+              <p class="info paragraph" style="color:greenyellow">¡VÁLIDO!</p>
+              
+               <p class="info paragraph"><u>CONCEPTO:</u><br>{{DOCUMENTO}}</p>    
+               <p class="info paragraph"><u>CIUDADANO:</u><br><b>{{CIUDADADANO}}</b></p>
+               <p class="info paragraph"><u>IMPORTE:</u><br>{{IMPORTE | currency}}</p>
+               <strong><p class="info paragraph"><u>ESTATUS:</u> <br>{{ESTATUS}}</p></strong>
+            <!-- <a href="https://apir.grupoapd.mx/Recibos/{{archivo}}.pdf" Target="_blank" *ngIf="is_recibo"><ion-button expand="block">VER/DESCARGAR RECIBO</ion-button></a>
+             <a href="https://apir.grupoapd.mx/documentacion/QR/{{archivo}}.pdf" Target="_blank" *ngIf="is_recibo"><ion-button expand="block">VER/DESCARGAR RECIBO</ion-button></a>-->    
+            <!--<ion-button expand="block" (click)="login()" >IR A PAGAR</ion-button>
+             <a href="https://apir.grupoapd.mx/documentacion/QR/{{archivo}}.pdf" Target="_blank" ><ion-button expand="block" color="tertiary">DESCARGAR PDF</ion-button></a>--> 
+            <img src="assets/img/apd_reducida.png" alt="" width="150px" height="80px" class="image_ezeq">
+            </div>
+            </ion-col>      
+    </ion-row>
+    </ion-grid>
+    
+    
+     <ion-grid  class="employee-card"  style="background: url(../assets/fondo-gris-oscuro.jpg) 0 0/100% 100% no-repeat;"  *ngIf="error">
+   <ion-row>
+          <ion-col size="12">
+            <div class=" ion-text-center">
+              <img class="ion-text-center" alt="200*200" height="100" width="135" src="assets/img/hero-logo.png"/> 
+            </div>
+          </ion-col> </ion-row>
+           <ion-row>
+            <ion-col style="text-align: center;">
+              <h1 class="info-error">ERROR :</h1>
+              <img  src="assets/img/tacha.png"alt=""  width="120px" height="70px"class="image_ezeq" >
+              <br><br>        
+                <div class="box" data-aos-delay="100" >
+                  <h3 class="info-error paragraph-error">VALIDACIÓN</h3>
+                  <p class="info-error paragraph-error"  >El QR INGRESADO ES <br> <strong><h2 class="info-error" style="color:red">¡INVALIDO!</h2></strong></p> 
+                   <img src="assets/img/apd_reducida.png" alt="" width="120px" height="50px" class="image_ezeq" >
+                </div>
+                </ion-col>
+                </ion-row>
+      </ion-grid>
+      <br><br>
+  <!-- End #main -->
+  <!-- ======= Footer ======= -->
+  <footer id="footer"> 
+    <div class="footer-top"> 
+      <div class="container"> 
+        <div class="row justify-content-center">
+          <div class="col-lg-6"> 
+            <h3>Lerdo SAPAL</h3> 
+          </div>
+        </div> 
+      </div>
+    </div> 
+    <div class="container footer-bottom clearfix">
+      <div class="copyright">
+        &copy; Derechos reservados, <strong><span>SAPAL</span></strong>. Lerdo Durango
+      </div>
+      <div class="credits"> 
+        Desarrollado por <a href="https://grupoapd.mx/" style="color: #FFFFFF; text-decoration: none;">APD Consultores en Tecnologías.</a>
+      </div>
+    </div>
+  </footer>
+<!-- End Footer -->
+</ion-content>
+
+
+

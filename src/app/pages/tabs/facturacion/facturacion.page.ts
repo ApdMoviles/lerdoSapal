@@ -8,8 +8,7 @@ import { Component, OnInit } from '@angular/core';
 export class Facturacionpage implements OnInit {
 
   constructor() { }
-
+  color:boolean=false;
   ngOnInit() {
   }
-
 }

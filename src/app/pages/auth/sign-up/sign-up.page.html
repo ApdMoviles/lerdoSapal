@@ -28,6 +28,25 @@
         </div>
 
         <app-custom-input
+          autocomplete="lastname"
+          [control]="form.controls.lastname"
+          label="Apellido"
+          type="lastname"
+          icon="person"
+        ></app-custom-input>
+        <div
+          class="validators"
+          *ngIf="form.controls.lastname.errors && form.controls.lastname.dirty"
+        >
+          <div *ngIf="form.controls.lastname.errors?.['required']">
+            Ingresa tu Apellido
+          </div>
+          <div *ngIf="form.controls.lastname.errors?.['minlenght']">
+            Ingresa un Apellido valido
+          </div>
+        </div>
+
+        <app-custom-input
           autocomplete="email"
           [control]="form.controls.email"
           label="Correo"
@@ -43,6 +62,25 @@
           </div>
           <div *ngIf="form.controls.email.errors?.['email']">
             Ingresa un email valido
+          </div>
+        </div>
+
+        <app-custom-input
+          autocomplete="phone"
+          [control]="form.controls.phone"
+          label="Telefono"
+          type="tel"
+          icon="phone-portrait-outline"
+        ></app-custom-input>
+        <div
+          class="validators"
+          *ngIf="form.controls.phone.errors && form.controls.phone.dirty"
+        >
+          <div *ngIf="form.controls.phone.errors?.['required']">
+            Ingresa tu telefono
+          </div>
+          <div *ngIf="form.controls.phone.errors?.['maxlength']">
+            Ingresa un telefono valido
           </div>
         </div>
 

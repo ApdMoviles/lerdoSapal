@@ -3,6 +3,7 @@ import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { NavController,AlertController, LoadingController, } from '@ionic/angular';
 import { DomSanitizer } from '@angular/platform-browser';
 import { ConsumosService } from 'src/app/services/consumos.service';
+import { Call } from '@angular/compiler';
 
 
 @Component({
@@ -32,7 +33,7 @@ export class infopagosPage implements OnInit {
 
 
   response: any; 
-  clave: any = "34941";
+  clave: any = "";
   ciudadano = "";
   direccion = "";
   colonia = "";
@@ -57,9 +58,10 @@ export class infopagosPage implements OnInit {
   descuento: any;
   pag_convenio: any;
   async ngOnInit() {
+    this.clave = localStorage.getItem("folio")
     const loading = await this.loadingController.create({
       cssClass: 'my-loading-class',
-      message: '<b>Cargando...</b>' 
+      message: 'Cargando...' 
     });
     await loading.present();
  debugger;
@@ -167,6 +169,7 @@ debugger;
 
       loading.dismiss();
     }
+    localStorage.setItem("folio","")
   }
 
   pagar() { 
@@ -175,29 +178,9 @@ debugger;
     this.url = "/metodos/" + this.clave + "/" + this.total;
     //const URL = this.url; 
     //this.url = this.domsanitizer.bypassSecurityTrustResourceUrl(URL);
-    
-
     this.isBusqueda = false;
     this.isInfo = false;
     this.isPago = true;  
+    this.NavCtrl.navigateRoot(`tabs/pagos/metodos?recibo=${this.clave}&total=${this.total}`)
   }
-  async volver() {
-    const loading = await this.loadingController.create({
-      cssClass: 'my-loading-class',
-      message: '<b>Cargando...</b>' 
-    });
-    await loading.present()
-    
-    this.NavCtrl.navigateRoot("tabs/pagos");
-
-    loading.dismiss();
-  }
-
-  submit() {
-    if (this.form.valid) {
-      console.log(this.form.value);
-    }
-    this.NavCtrl.navigateRoot("auth");
-  }
-
 }

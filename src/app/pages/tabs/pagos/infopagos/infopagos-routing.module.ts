@@ -3,6 +3,7 @@ import { Routes, RouterModule } from '@angular/router';
 
 import { infopagosPage } from './infopagos.page';
 import { PagosPage } from '../pagos.page';
+import { metodosPage } from '../metodos/metodos.page';
 
 const routes: Routes = [
   {
@@ -12,7 +13,11 @@ const routes: Routes = [
   {
     path: 'pagos',
     component: PagosPage
-  }
+  },
+  {
+    path: 'metodos',
+    component: metodosPage
+  },
 ];
 
 @NgModule({

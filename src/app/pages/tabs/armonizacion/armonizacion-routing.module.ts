@@ -7,6 +7,14 @@ const routes: Routes = [
   {
     path: '',
     component: ArmonizacionPage
+  },
+  {
+    path: 'sevac',
+    loadChildren: () => import('./SEVAC/SEVAC.module').then( m => m.SEVACPageModule)
+  },
+  {
+    path: 'cuentasp',
+    loadChildren: () => import('./cuentaspublicas/cuentaspublicas.module').then( m => m.cuentaspublicasPageModule)
   }
 ];
 

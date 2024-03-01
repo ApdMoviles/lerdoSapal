@@ -1,5 +1,5 @@
 <ion-content >
-  <app-header perfil="/tabs/perfil"></app-header>
+  <app-header backButton="/tabs/pagos"></app-header>
   <div class="content">
     <section id="modulos" class="team">
      <ion-card color="medium">
@@ -9,40 +9,7 @@
         </ion-card-title>
       </ion-card-header>
       <ion-card-content>
-        <form
-        (keyup.enter)="submit()"
-        (ngSubmit)="submit()"
-        class="ion-text-center"
-      >
-      <app-custom-input
-          autocomplete="name"
-          [control]="form.controls.name"
-          label="Ingrese el número de cuenta:"
-          type="number"
-          icon="water"
-        ></app-custom-input>
-        <div
-          class="validators"
-          *ngIf="form.controls.name.errors && form.controls.name.dirty"
-        >
-          <div *ngIf="form.controls.name.errors?.['required']">
-            Ingresa el número de cuenta
-          </div>
-          <div *ngIf="form.controls.name.errors?.['minlenght']">
-            Ingresa un número de cuenta valido
-          </div>
-        </div>
-
-        <ion-button
-        class="ion-margin-vertical"
-        [disabled]="form.invalid"
-        type="submit"
-        shape="round"
-      >
-      BUSCAR
-        <ion-icon slot="end" name="search-circle"></ion-icon>
-      </ion-button>
-      </form>
+        <iframe [src]="url" class="container-iframe"></iframe>
       </ion-card-content>
     </ion-card>
     </section>

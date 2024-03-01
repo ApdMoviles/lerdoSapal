@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { NavController } from '@ionic/angular';
 
 @Component({
   selector: 'app-armonizacion',
@@ -7,9 +8,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ArmonizacionPage implements OnInit {
 
-  constructor() { }
+  constructor(public navCtrl: NavController,) { }
 
   ngOnInit() {
   }
-
+  irsevac(){
+    this.navCtrl.navigateForward("tabs/armonizacion/sevac")
+  }
+  ircuentasp(){
+    this.navCtrl.navigateForward("tabs/armonizacion/cuentasp")
+  }
 }

@@ -11,7 +11,7 @@
 
 
   <ion-item class="ion-margin-vertical">
-    <ion-input labelPlacement="stacked" debounce="500" [label]="label" [autocomplete]="autocomplete" [type]="type" [formControl]="control">
+    <ion-input labelPlacement="stacked" debounce="500"  [label]="label" [autocomplete]="autocomplete" [type]="type" [formControl]="control">
       <ion-icon color="primary" *ngIf="icon" slot="start" [name]="icon"></ion-icon>
       <ion-buttons *ngIf="isPasword" slot="end">
         <ion-button (click)="ocultaOMuestraContra()">

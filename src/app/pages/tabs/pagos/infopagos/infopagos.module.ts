@@ -8,7 +8,6 @@ import { infopagosPageRoutingModule } from './infopagos-routing.module';
 
 import { infopagosPage } from './infopagos.page';
 import { SharedModule } from 'src/app/shared/shared.module';
-import { ConsumosService } from 'src/app/services/consumos.service';
 
 @NgModule({
   imports: [

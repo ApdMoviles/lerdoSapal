@@ -1,7 +1,33 @@
 <ion-content >
-  <app-header perfil="/tabs/perfil"></app-header>
- 
+  <app-header></app-header>
   <div class="content">
-   
+    <section id="modulos" class="team">
+      <ion-card color="medium">
+       <ion-card-header>
+         <ion-card-title class="ion-text-center ion-no-margin">
+           <h4>ARMONIZACIÓN</h4>
+         </ion-card-title>
+       </ion-card-header>
+       <ion-card-content>
+        <ion-button
+        (click)="irsevac()"
+        class="ion-margin-vertical"
+        shape="round"
+        
+      >
+      SEVAC
+        <ion-icon slot="end" name="search-circle"></ion-icon>
+      </ion-button>
+      <ion-button
+        (click)="ircuentasp()"
+        class="ion-margin-vertical"
+        shape="round"
+      >
+      CUENTAS PUBLICAS
+        <ion-icon slot="end" name="search-circle"></ion-icon>
+      </ion-button>
+       </ion-card-content>
+     </ion-card>
+     </section>
   </div>
 </ion-content>
