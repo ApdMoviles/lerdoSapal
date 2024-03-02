@@ -1,9 +1,15 @@
 <ion-content>
   <app-header backButton="/auth"></app-header>
   <div class="content">
-    <div style="display: flex; align-items: center; justify-content: center;"><h1>REGISTRAR USUARIO</h1></div>
-    <div class="d-flex-center">
-      <form
+    <section id="modulos" class="team">
+      <ion-card color="medium" class="card">
+       <ion-card-header>
+         <ion-card-title class="ion-text-center ion-no-margin">
+           <h4>RECUPERAR USUARIO</h4>
+         </ion-card-title>
+       </ion-card-header>
+       <ion-card-content>
+        <form
         (keyup.enter)="submit()"
         (ngSubmit)="submit()"
         class="ion-text-center"
@@ -37,6 +43,8 @@
           <ion-icon slot="end" name="person-add"></ion-icon>
         </ion-button>
       </form>
-    </div>
+       </ion-card-content>
+     </ion-card>
+     </section> 
   </div>
 </ion-content>

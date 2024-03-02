@@ -27,10 +27,29 @@
 @import url('https://fonts.googleapis.com/css?family=Poppins:700|Poppins:400');
 
 ////////ESTILOS GRISES PARA LA APLICACION/////////////////
-// body{
-//   filter: grayscale(1);
-// }
+//  body{
+//    filter: grayscale(1);
+//  }
 //////////////////////////////////////////////////////////
+/// 
+.invert{
+  filter:invert(1);
+}
+.normal{
+  filter: invert(0);
+}
+ion-card{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+.container-iframe{
+  height: 130vh;
+  width: 90vw;
+  margin-bottom: 5px;
+}
 
 body {
   font-family: 'Poppins';

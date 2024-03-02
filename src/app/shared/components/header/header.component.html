@@ -25,6 +25,17 @@
       </ion-button>
     </ion-buttons>
     </div>
+    <div class="navbar" *ngIf="navbar">
+      <ion-grid fixed>
+        <ion-row class="ion-justify-content-around">
+          <ion-col class="columna" (click)="goHome()">INICIO</ion-col>
+          <ion-col class="columna" (click)="goUser()">USUARIO</ion-col>
+          <ion-col class="columna" (click)="goPay()">PAGAR SERVICIO</ion-col>
+          <ion-col class="columna" (click)="goArm()">ARMONIZACION</ion-col>
+          <ion-col class="columna" (click)="goFact()">FACTURAR</ion-col>
+        </ion-row>
+      </ion-grid>
+    </div>
 
     
   </ion-toolbar>

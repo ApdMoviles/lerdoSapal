@@ -1,14 +1,21 @@
 <ion-content>
   <app-header backButton="/auth"></app-header>
   <div class="content">
-    <div style="display: flex; align-items: center; justify-content: center;"><h1>REGISTRAR USUARIO</h1></div>
-    <div class="d-flex-center">
-      <form
+    <section id="modulos" class="team">
+      <ion-card color="medium" class="card">
+       <ion-card-header>
+         <ion-card-title class="ion-text-center ion-no-margin">
+           <h4>REGISTRAR USUARIO</h4>
+         </ion-card-title>
+       </ion-card-header>
+       <ion-card-content>
+        <form
         (keyup.enter)="submit()"
         (ngSubmit)="submit()"
         class="ion-text-center"
       >
         <app-custom-input
+          (input)="limitarCaracteresMays($event,20,form.controls.name)"
           autocomplete="name"
           [control]="form.controls.name"
           label="Nombre"
@@ -28,6 +35,7 @@
         </div>
 
         <app-custom-input
+          (input)="limitarCaracteresMays($event,20,form.controls.lastname)"
           autocomplete="lastname"
           [control]="form.controls.lastname"
           label="Apellido"
@@ -47,6 +55,7 @@
         </div>
 
         <app-custom-input
+          (input)="limitarCaracteresMin($event,60)"
           autocomplete="email"
           [control]="form.controls.email"
           label="Correo"
@@ -66,6 +75,7 @@
         </div>
 
         <app-custom-input
+          (input)="formatoCelularContacto($event)"
           autocomplete="phone"
           [control]="form.controls.phone"
           label="Telefono"
@@ -127,6 +137,8 @@
           <ion-icon slot="end" name="person-add"></ion-icon>
         </ion-button>
       </form>
-    </div>
+       </ion-card-content>
+     </ion-card>
+     </section>
   </div>
 </ion-content>

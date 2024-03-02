@@ -18,6 +18,7 @@ const routes: Routes = [
   {
     path: 'documentacion/QR/carta-no-adeudo',
     loadChildren: () => import('./documentacion/QR/carta-no-adeudo/carta-no-adeudo.module').then( m => m.CartaNoAdeudoPageModule)
+    
   },
   {
     path: 'documentacion/QR/carta-no-servicio',

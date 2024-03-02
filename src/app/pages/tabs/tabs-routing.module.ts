@@ -1,12 +1,13 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-
+import { AuthGuardService } from '../auth/guards/auth.guards'
 import { TabsPage } from './tabs.page';
 
 const routes: Routes = [
   {
     path: '',
     component: TabsPage,
+    canActivate: [AuthGuardService],
     children: [
       {
         path: 'home',
@@ -40,5 +41,6 @@ const routes: Routes = [
 @NgModule({
   imports: [RouterModule.forChild(routes)],
   exports: [RouterModule],
+  providers: [AuthGuardService]
 })
 export class TabsPageRoutingModule {}

@@ -1,5 +1,5 @@
 <ion-content >
-  <app-header></app-header>
+  <app-header navbar="true"></app-header>
   <div class="content">
     <section id="modulos" class="team">
       <ion-card color="medium">
@@ -8,7 +8,9 @@
            <h4>ARMONIZACIÓN</h4>
          </ion-card-title>
        </ion-card-header>
-       <ion-card-content>
+       <ion-card-content style="display: flex; align-items: center;
+       flex-direction: column;
+       flex-wrap: wrap;">
         <ion-button
         (click)="irsevac()"
         class="ion-margin-vertical"
@@ -18,6 +20,7 @@
       SEVAC
         <ion-icon slot="end" name="search-circle"></ion-icon>
       </ion-button>
+
       <ion-button
         (click)="ircuentasp()"
         class="ion-margin-vertical"

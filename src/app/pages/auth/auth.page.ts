@@ -19,22 +19,8 @@ export class AuthPage implements OnInit {
 
   lusuario: any = "";
   lpassword: String = "";
+  wrongs:number = 0;
 
-  nombre: String = "";
-  apellidos: string = "";
-  correo: any = "";
-  telefono: String = "";
-  password: String = "";
-  cpassword: String = "";
-
-  rcorreo: any = "";
-
-  passwordTypeInput  =  'password';
-  iconpassword  =  'eye-off-outline';
-  passwordTypeInput2  =  'password';
-  iconpassword2  =  'eye-off-outline';
-  passwordTypeInput3  =  'password';
-  iconpassword3  =  'eye-off-outline';
 
   constructor(public navCtrl: NavController,
               public loadingController: LoadingController,
@@ -42,8 +28,17 @@ export class AuthPage implements OnInit {
               private consumoService: ConsumosService) { }
 
   ngOnInit() {
-    this.consumoService.gethost();
+    localStorage.clear();
   } 
+
+  limitarCaracteresMin(event: any, cantidad: number) {
+    let valor = event.target.value;
+    if (valor.length > cantidad) {
+      valor = valor.substring(0, cantidad);
+    }
+    this.form.controls.email.setValue(valor.toLowerCase()); // Actualiza el valor del input directamente
+  }
+
   async submit() { 
     const loading = await this.loadingController.create({
       cssClass: 'my-loading-class',
@@ -55,9 +50,14 @@ export class AuthPage implements OnInit {
     try { 
       this.response = await this.consumoService.postLogear(this.lusuario, this.lpassword);
       await this.response.forEach(async element => {
-        if(element.codigo == 1) {   
+        if(element.codigo == 1) {
+          console.log(element)   
           localStorage.setItem("LUS_CLAVE",element.objetoResultado.LUS_CLAVE);
           localStorage.setItem("LUS_CORREO",element.objetoResultado.LUS_CORREO);
+          localStorage.setItem("LUS_NOMBRE",element.objetoResultado.LUS_NOMBRE);
+          localStorage.setItem("LUS_APELLIDOS",element.objetoResultado.LUS_APELLIDOS);
+          localStorage.setItem("LUS_USUARIO",element.objetoResultado.LUS_USUARIO);
+          localStorage.setItem("LUS_TELEFONO",element.objetoResultado.LUS_TELEFONO);
  
           if(element.objetoResultado.LUS_PERFIL == "SUPERADMIN"){
             this.navCtrl.navigateRoot("rpt-menu");
@@ -67,6 +67,7 @@ export class AuthPage implements OnInit {
 
           loading.dismiss();
         } else {
+          loading.dismiss();
           const alert = await this.alertController.create({
             cssClass: 'my-alert-class',
             header: 'Error', 
@@ -75,8 +76,7 @@ export class AuthPage implements OnInit {
           });
       
           await alert.present();
-    
-          loading.dismiss();
+          this.wrongs+=1;
         }
       }); 
     } catch (error) {
@@ -87,7 +87,6 @@ export class AuthPage implements OnInit {
         buttons: ['OK']
       });
   
-      await alert.present();
 
       loading.dismiss();
     }

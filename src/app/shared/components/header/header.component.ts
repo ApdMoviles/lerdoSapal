@@ -1,4 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
+import { NavController } from '@ionic/angular';
 import { BehaviorSubject } from 'rxjs';
 import { ThemeService } from 'src/app/services/theme.service';
 
@@ -15,10 +16,12 @@ export class HeaderComponent implements OnInit {
   @Input() isModal: boolean;
   @Input() color: string;
   @Input() centerTitle: boolean;
+  @Input() navbar: string;
 
   darkMode: BehaviorSubject<boolean>;
 
-  constructor(private themeSvc: ThemeService) {}
+  constructor(private themeSvc: ThemeService,
+    public navCtrl: NavController) {}
   click:boolean = false;
   ngOnInit() {
     this.color="primary-gradient"
@@ -29,6 +32,31 @@ export class HeaderComponent implements OnInit {
   setTheme(darkMode: boolean) {
     this.click = true;
     this.themeSvc.setTheme(darkMode);
+    this.click = false;
+  }
+  goHome(){
+    this.click = true;
+    this.navCtrl.navigateBack('tabs/home');
+    this.click = false;
+  }
+  goUser(){
+    this.click = true;
+    this.navCtrl.navigateBack('tabs/perfil');
+    this.click = false;
+  }
+  goPay(){
+    this.click = true;
+    this.navCtrl.navigateBack('tabs/pagos');
+    this.click = false;
+  }
+  goArm(){
+    this.click = true;
+    this.navCtrl.navigateBack('tabs/armonizacion');
+    this.click = false;
+  }
+  goFact(){
+    this.click = true;
+    this.navCtrl.navigateBack('tabs/facturacion');
     this.click = false;
   }
 }

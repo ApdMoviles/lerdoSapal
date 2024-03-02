@@ -3,6 +3,8 @@ import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { DomSanitizer } from '@angular/platform-browser';
 import { ActivatedRoute } from '@angular/router';
 import { NavController,AlertController, LoadingController, } from '@ionic/angular';
+import { BehaviorSubject } from 'rxjs';
+import { ThemeService } from 'src/app/services/theme.service';
 
 @Component({
   selector: 'app-metodos',
@@ -11,7 +13,8 @@ import { NavController,AlertController, LoadingController, } from '@ionic/angula
 })
 export class metodosPage implements OnInit {
 
-  constructor(public navCtrl: NavController,
+  constructor(private themeSvc: ThemeService,
+    public navCtrl: NavController,
     public domsanitizer:DomSanitizer,
     public alertController: AlertController,
     public loadingController: LoadingController,
@@ -19,7 +22,7 @@ export class metodosPage implements OnInit {
     ) { }
   expMask = [/[0-9]/, /[0-9]/, '/', /[0-9]/, /[0-9]/];
   tarjetaMask = [/[0-9]/, /[0-9]/, /[0-9]/, /[0-9]/, /[0-9]/, /[0-9]/, /[0-9]/, /[0-9]/, /[0-9]/, /[0-9]/, /[0-9]/, /[0-9]/, /[0-9]/, /[0-9]/, /[0-9]/, /[0-9]/];
-
+  darkMode: BehaviorSubject<boolean>;
   recibo: any = "";
   usuario: any = "";
   host:any="";
@@ -38,6 +41,8 @@ export class metodosPage implements OnInit {
   conc: string ="NA";
   url_array = [];
  ngOnInit() {
+  this.darkMode = this.themeSvc.darkMode
+  console.log(this.darkMode)
   console.log(this._route.snapshot.queryParams);
    
    // Acceder a los parámetros de consulta en lugar de parámetros de ruta

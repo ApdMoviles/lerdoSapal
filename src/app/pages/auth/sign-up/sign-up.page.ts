@@ -49,6 +49,47 @@ export class SignUpPage implements OnInit {
     this.confirmPasswordValidator()
   }
 
+  limitarCaracteresMays(event: any, cantidad: number,FormControl:FormControl) {
+    let valor = event.target.value;
+    if (valor.length > cantidad) {
+      valor = valor.substring(0, cantidad);
+      
+    }
+    FormControl.setValue(valor.toUpperCase());
+  }
+
+  limitarCaracteresMin(event: any, cantidad: number) {
+    let valor = event.target.value;
+    if (valor.length > cantidad) {
+      valor = valor.substring(0, cantidad);
+    }
+    this.form.controls.email.setValue(valor.toLowerCase()); // Actualiza el valor del input directamente
+  }
+
+  formatoCelularContacto(event:any){
+    let phoneNumber = event.target.value;
+    // Remover cualquier caracter que no sea un número
+    phoneNumber = phoneNumber.replace(/[^\d]/g, '');
+    if (
+      phoneNumber.length === 10 ||
+      phoneNumber.length >= 14 ||
+      phoneNumber.length >= 12 ||
+      phoneNumber.length >= 11
+    ) {
+      phoneNumber = `(${phoneNumber.slice(0, 3)}) ${phoneNumber.slice(
+        3,
+        6
+      )}-${phoneNumber.slice(6)}`;
+    }
+    if (phoneNumber.length >= 14) {
+      phoneNumber = phoneNumber.slice(0, 14);
+      this.form.controls.phone.setValue(phoneNumber);
+    }
+
+    // Actualizar el valor del ngModel
+    this.form.controls.phone.setValue(phoneNumber);
+  }
+
   async submit() {
 
     this.nombre = this.form.controls.name.value

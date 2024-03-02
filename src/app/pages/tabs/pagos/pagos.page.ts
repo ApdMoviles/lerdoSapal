@@ -33,7 +33,7 @@ export class PagosPage implements OnInit {
     this.existe=null
     localStorage.setItem("folio","")
   }
-  ConvertirenMayusculas(event: any, cantidad: number) {
+  limitarCaracteres(event: any, cantidad: number) {
     let valor = event.target.value;
     if (valor.length > cantidad) {
       valor = valor.substring(0, cantidad);

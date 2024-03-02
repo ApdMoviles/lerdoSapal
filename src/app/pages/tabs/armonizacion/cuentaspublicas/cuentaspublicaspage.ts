@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { BehaviorSubject } from 'rxjs';
+import { ThemeService } from 'src/app/services/theme.service';
 
 @Component({
   selector: 'app-cuentaspublicas',
@@ -7,9 +9,10 @@ import { Component, OnInit } from '@angular/core';
 })
 export class cuentaspublicasPage implements OnInit {
 
-  constructor() { }
-
+  constructor(private themeSvc: ThemeService) { }
+  darkMode: BehaviorSubject<boolean>;
   ngOnInit() {
+    this.darkMode = this.themeSvc.darkMode
   }
 
 }

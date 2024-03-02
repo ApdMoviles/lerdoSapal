@@ -1,5 +1,5 @@
 <ion-content >
-  <app-header transparent="-"></app-header>
+  <app-header transparent="-" navbar="true"></app-header>
   <div class="content">
     <section id="modulos" class="team">
       <ion-card color="medium">
@@ -9,7 +9,29 @@
          </ion-card-title>
        </ion-card-header>
        <ion-card-content>
+          <ion-grid>
+            <ion-row class="bg">
+              <ion-col class="title" size="auto">NOMBRE:</ion-col>
+              <ion-col size="auto"><p>{{usuario}}</p></ion-col>
+            </ion-row>
+            <ion-row>
+              <ion-col class="title" size="auto">CORREO:</ion-col>
+              <ion-col size="auto"><p>{{correo}}</p></ion-col>
+            </ion-row>
+            <ion-row class="bg">
+              <ion-col class="title" size="auto">TELEFONO:</ion-col>
+              <ion-col size="auto"><p>{{telefono}}</p></ion-col>
+            </ion-row>
+          </ion-grid>
+          <ion-button
+        routerLink="/auth"
+        class="ion-margin-vertical"
+        shape="round"
         
+      >
+      CERRAR SESION
+        <ion-icon slot="end" name="search-circle"></ion-icon>
+      </ion-button>
        </ion-card-content>
      </ion-card>
      </section>
