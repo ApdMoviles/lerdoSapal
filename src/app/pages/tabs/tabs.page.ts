@@ -27,7 +27,7 @@ export class TabsPage implements OnInit {
     this.isEntrar = true;
     const loading = await this.loadingController.create({
       cssClass: 'my-loading-class',
-      message: '<b>Cargando...</b>',
+      message: 'Cargando...',
     });
     await loading.present();
 

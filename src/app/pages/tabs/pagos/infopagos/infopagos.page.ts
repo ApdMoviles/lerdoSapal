@@ -148,7 +148,7 @@ debugger;
           const alert = await this.alertController.create({
             cssClass: 'my-alert-class',
             header: 'Error', 
-            message: '<b>' + element.mensaje + '</b>',
+            message: '' + element.mensaje + '',
             buttons: ['OK']
           });
       
@@ -161,7 +161,7 @@ debugger;
       const alert = await this.alertController.create({
         cssClass: 'my-alert-class',
         header: 'Error', 
-        message: '<b>Hubo un problema con el servidor, inténtelo nuevamente</b>',
+        message: 'Hubo un problema con el servidor, inténtelo nuevamente',
         buttons: ['OK']
       });
   

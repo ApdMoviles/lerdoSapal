@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+/* import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
 import { BorronYCuentaNuevaPage } from './borron-y-cuenta-nueva.page';
@@ -15,3 +15,4 @@ const routes: Routes = [
   exports: [RouterModule],
 })
 export class BorronYCuentaNuevaPageRoutingModule {}
+ */

@@ -7,15 +7,15 @@ const routes: Routes = [
   {
     path: '',
     component: TabsPage,
-    canActivate: [AuthGuardService],
+    
     children: [
       {
         path: 'home',
-        loadChildren: () => import('./home/home.module').then( m => m.HomePageModule)
+        loadChildren: () => import('./home/home.module').then( m => m.HomePageModule),canActivate: [AuthGuardService],
       },
       {
         path: 'pagos',
-        loadChildren: () => import('./pagos/pagos.module').then( m => m.PagosPageModule)
+        loadChildren: () => import('./pagos/pagos.module').then( m => m.PagosPageModule),canActivate: [AuthGuardService],
       },
       {
         path: 'armonizacion',
@@ -23,7 +23,7 @@ const routes: Routes = [
       },
       {
         path: 'facturacion',
-        loadChildren: () => import('./facturacion/facturacion.module').then( m => m.FacturacionPageModule)
+        loadChildren: () => import('./facturacion/facturacion.module').then( m => m.FacturacionPageModule),canActivate: [AuthGuardService],
       },
       {
         path: 'qr',
@@ -31,7 +31,7 @@ const routes: Routes = [
       },
       {
         path: 'perfil',
-        loadChildren: () => import('./perfil/perfil.module').then( m => m.perfilPageModule)
+        loadChildren: () => import('./perfil/perfil.module').then( m => m.perfilPageModule),canActivate: [AuthGuardService],
       }
     ]
   },

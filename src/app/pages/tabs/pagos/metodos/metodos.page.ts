@@ -77,7 +77,7 @@ export class metodosPage implements OnInit {
   async go() {  
     const loading = await this.loadingController.create({
       cssClass: 'my-loading-class',
-      message: '<b>Cargando...</b>' 
+      message: 'Cargando...' 
     });
     await loading.present()
 debugger;

@@ -61,7 +61,7 @@ async check_datos_qr (CEM_CLAVE)
 {
   const loading = await this.loadingController.create({
     cssClass: 'my-loading-class',
-    message: '<b>Cargando...</b>' 
+    message: 'Cargando...' 
   });
   await loading.present()
   this.respuesta = await this.consumoService.consulta_qr_empleado(CEM_CLAVE);
@@ -156,7 +156,7 @@ this.telefono = element.CEM_TELEFONO;
   async ionViewDidLeave() { 
     const loading = await this.loadingController.create({
       cssClass: 'my-loading-class',
-      message: '<b>Cargando...</b>' 
+      message: 'Cargando...' 
     });
     await loading.present();
 
@@ -173,7 +173,7 @@ this.telefono = element.CEM_TELEFONO;
     this.isEntrar = true;
     const loading = await this.loadingController.create({
       cssClass: 'my-loading-class',
-      message: '<b>Cargando...</b>' 
+      message: 'Cargando...' 
     });
     await loading.present();
 
@@ -184,7 +184,7 @@ this.telefono = element.CEM_TELEFONO;
   async contacto() { 
     const loading = await this.loadingController.create({
       cssClass: 'my-loading-class',
-      message: '<b>Cargando...</b>' 
+      message: 'Cargando...' 
     });
     await loading.present()
 
@@ -193,7 +193,7 @@ this.telefono = element.CEM_TELEFONO;
         const alert = await this.alertController.create({
           cssClass: 'my-alert-class',
           header: 'Advertencia',
-          message: '<b>El Nombre completo esta vacío, o no cuenta con un formato valido.</b>',
+          message: 'El Nombre completo esta vacío, o no cuenta con un formato valido.',
           buttons: ['OK']
         });
   
@@ -206,7 +206,7 @@ this.telefono = element.CEM_TELEFONO;
         const alert = await this.alertController.create({
           cssClass: 'my-alert-class',
           header: 'Advertencia',
-          message: '<b>El Correo esta vacío, o no cuenta con un formato valido.</b>',
+          message: 'El Correo esta vacío, o no cuenta con un formato valido.',
           buttons: ['OK']
         });
   
@@ -222,7 +222,7 @@ this.telefono = element.CEM_TELEFONO;
         const alert = await this.alertController.create({
           cssClass: 'my-alert-class',
           header: 'Advertencia',
-          message: '<b>El Correo esta vacío, o no cuenta con un formato valido.</b>',
+          message: 'El Correo esta vacío, o no cuenta con un formato valido.',
           buttons: ['OK']
         });
   
@@ -235,7 +235,7 @@ this.telefono = element.CEM_TELEFONO;
         const alert = await this.alertController.create({
           cssClass: 'my-alert-class',
           header: 'Advertencia',
-          message: '<b>El Nombre completo esta vacío, o no cuenta con un formato valido.</b>',
+          message: 'El Nombre completo esta vacío, o no cuenta con un formato valido.',
           buttons: ['OK']
         });
   
@@ -247,7 +247,7 @@ this.telefono = element.CEM_TELEFONO;
         const alert = await this.alertController.create({
           cssClass: 'my-alert-class',
           header: 'Advertencia',
-          message: '<b>El Nombre completo esta vacío, o no cuenta con un formato valido.</b>',
+          message: 'El Nombre completo esta vacío, o no cuenta con un formato valido.',
           buttons: ['OK']
         });
   
@@ -262,7 +262,7 @@ this.telefono = element.CEM_TELEFONO;
           const alert = await this.alertController.create({
             cssClass: 'my-alert-class',
             header: 'Correo', 
-            message: '<b>' + element.mensaje + '</b>',
+            message: '' + element.mensaje + '',
             buttons: ['OK']
           });
       
@@ -278,7 +278,7 @@ this.telefono = element.CEM_TELEFONO;
           const alert = await this.alertController.create({
             cssClass: 'my-alert-class',
             header: 'Error', 
-            message: '<b>' + element.mensaje + '</b>',
+            message: '' + element.mensaje + '',
             buttons: ['OK']
           });
       
@@ -291,7 +291,7 @@ this.telefono = element.CEM_TELEFONO;
       const alert = await this.alertController.create({
         cssClass: 'my-alert-class',
         header: 'Error', 
-        message: '<b>Hubo un problema con el servidor, inténtelo nuevamente</b>',
+        message: 'Hubo un problema con el servidor, inténtelo nuevamente',
         buttons: ['OK']
       });
   

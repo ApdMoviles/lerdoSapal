@@ -28,7 +28,7 @@ export class CartaNoServicioPage implements OnInit {
   async ionViewDidLeave() { 
     const loading = await this.loadingController.create({
       cssClass: 'my-loading-class',
-      message: '<b>Cargando...</b>' 
+      message: 'Cargando...' 
     });
     await loading.present();
 
@@ -45,7 +45,7 @@ export class CartaNoServicioPage implements OnInit {
     this.isEntrar = true;
     const loading = await this.loadingController.create({
       cssClass: 'my-loading-class',
-      message: '<b>Cargando...</b>' 
+      message: 'Cargando...' 
     });
     await loading.present();
 
@@ -56,7 +56,7 @@ export class CartaNoServicioPage implements OnInit {
   async contacto() { 
     const loading = await this.loadingController.create({
       cssClass: 'my-loading-class',
-      message: '<b>Cargando...</b>' 
+      message: 'Cargando...' 
     });
     await loading.present()
 
@@ -65,7 +65,7 @@ export class CartaNoServicioPage implements OnInit {
         const alert = await this.alertController.create({
           cssClass: 'my-alert-class',
           header: 'Advertencia',
-          message: '<b>El Nombre completo esta vacío, o no cuenta con un formato valido.</b>',
+          message: 'El Nombre completo esta vacío, o no cuenta con un formato valido.',
           buttons: ['OK']
         });
   
@@ -78,7 +78,7 @@ export class CartaNoServicioPage implements OnInit {
         const alert = await this.alertController.create({
           cssClass: 'my-alert-class',
           header: 'Advertencia',
-          message: '<b>El Correo esta vacío, o no cuenta con un formato valido.</b>',
+          message: 'El Correo esta vacío, o no cuenta con un formato valido.',
           buttons: ['OK']
         });
   
@@ -94,7 +94,7 @@ export class CartaNoServicioPage implements OnInit {
         const alert = await this.alertController.create({
           cssClass: 'my-alert-class',
           header: 'Advertencia',
-          message: '<b>El Correo esta vacío, o no cuenta con un formato valido.</b>',
+          message: 'El Correo esta vacío, o no cuenta con un formato valido.',
           buttons: ['OK']
         });
   
@@ -107,7 +107,7 @@ export class CartaNoServicioPage implements OnInit {
         const alert = await this.alertController.create({
           cssClass: 'my-alert-class',
           header: 'Advertencia',
-          message: '<b>El Nombre completo esta vacío, o no cuenta con un formato valido.</b>',
+          message: 'El Nombre completo esta vacío, o no cuenta con un formato valido.',
           buttons: ['OK']
         });
   
@@ -119,7 +119,7 @@ export class CartaNoServicioPage implements OnInit {
         const alert = await this.alertController.create({
           cssClass: 'my-alert-class',
           header: 'Advertencia',
-          message: '<b>El Nombre completo esta vacío, o no cuenta con un formato valido.</b>',
+          message: 'El Nombre completo esta vacío, o no cuenta con un formato valido.',
           buttons: ['OK']
         });
   
@@ -134,7 +134,7 @@ export class CartaNoServicioPage implements OnInit {
           const alert = await this.alertController.create({
             cssClass: 'my-alert-class',
             header: 'Correo', 
-            message: '<b>' + element.mensaje + '</b>',
+            message: '' + element.mensaje + '',
             buttons: ['OK']
           });
       
@@ -150,7 +150,7 @@ export class CartaNoServicioPage implements OnInit {
           const alert = await this.alertController.create({
             cssClass: 'my-alert-class',
             header: 'Error', 
-            message: '<b>' + element.mensaje + '</b>',
+            message: '' + element.mensaje + '',
             buttons: ['OK']
           });
       
@@ -163,7 +163,7 @@ export class CartaNoServicioPage implements OnInit {
       const alert = await this.alertController.create({
         cssClass: 'my-alert-class',
         header: 'Error', 
-        message: '<b>Hubo un problema con el servidor, inténtelo nuevamente</b>',
+        message: 'Hubo un problema con el servidor, inténtelo nuevamente',
         buttons: ['OK']
       });
   

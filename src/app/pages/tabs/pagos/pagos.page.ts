@@ -16,7 +16,7 @@ export class PagosPage implements OnInit {
   form = new FormGroup({
     name: new FormControl('', [
       Validators.required,
-      Validators.minLength(4),
+      Validators.minLength(1),
       Validators.maxLength(15),
     ]),
   });

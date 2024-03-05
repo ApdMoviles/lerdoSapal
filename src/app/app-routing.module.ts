@@ -4,7 +4,7 @@ import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
 const routes: Routes = [
   {
     path: '',
-    redirectTo: 'auth',
+    redirectTo: 'tabs/home',
     pathMatch: 'full'
   },
   {
@@ -44,10 +44,10 @@ const routes: Routes = [
     path: 'documentacion/QR/factibilidad',
     loadChildren: () => import('./documentacion/QR/factibilidad/factibilidad.module').then( m => m.FactibilidadPageModule)
   },
-  {
+ /*  {
     path: 'documentacion/QR/borron-y-cuenta-nueva',
     loadChildren: () => import('./documentacion/QR/borron-y-cuenta-nueva/borron-y-cuenta-nueva.module').then( m => m.BorronYCuentaNuevaPageModule)
-  },
+  }, */
   {
     path: 'documentacion/QR/QyS',
     loadChildren: () => import('./documentacion/QR/qy-s/qy-s.module').then( m => m.QySPageModule)

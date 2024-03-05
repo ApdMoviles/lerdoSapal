@@ -1,4 +1,4 @@
-import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
+/* import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
 import { IonicModule } from '@ionic/angular';
 
 import { BorronYCuentaNuevaPage } from './borron-y-cuenta-nueva.page';
@@ -22,3 +22,4 @@ describe('BorronYCuentaNuevaPage', () => {
     expect(component).toBeTruthy();
   });
 });
+ */

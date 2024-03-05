@@ -40,4 +40,7 @@ export class perfilPage implements OnInit {
     this.correo = localStorage.getItem("LUS_CORREO")
     this.telefono = localStorage.getItem("LUS_TELEFONO")
   }
+  onClick(){
+    localStorage.clear();
+  }
 }
