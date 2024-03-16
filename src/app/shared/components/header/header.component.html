@@ -13,7 +13,7 @@
         </div>
       </ion-buttons>
 
-      <img src="assets/hero-logo.png" alt="">
+      <img src="assets/hero-logo.png" alt="" [ngClass]="darkMode.value ? 'invertir' : '' ">
       
       <ion-buttons style="padding-right:15px;" slot="end"> 
       <ion-button (click)="setTheme(false)" *ngIf="darkMode.value && !click">
@@ -25,17 +25,37 @@
       </ion-button>
     </ion-buttons>
     </div>
-    <div class="navbar" *ngIf="navbar">
-      <ion-grid fixed>
-        <ion-row class="ion-justify-content-around">
-          <ion-col class="columna" (click)="goHome()">INICIO</ion-col>
-          <ion-col class="columna" (click)="goUser()">USUARIO</ion-col>
-          <ion-col class="columna" (click)="goPay()">PAGAR SERVICIO</ion-col>
-          <ion-col class="columna" (click)="goArm()">ARMONIZACION</ion-col>
-          <ion-col class="columna" (click)="goFact()">FACTURAR</ion-col>
-        </ion-row>
-      </ion-grid>
+    <div class="w-full flex !justify-center">
+      <div class="navbar bg-opacity-0 w-2/4 rounded" *ngIf="navbar">
+        <!-- <ion-grid fixed>
+          <ion-row class="ion-justify-content-around">
+            <ion-col class="columna" (click)="goHome()">INICIO</ion-col>
+            <ion-col class="columna" (click)="goUser()">USUARIO</ion-col>
+            <ion-col class="columna" (click)="goPay()">PAGAR SERVICIO</ion-col>
+            <ion-col class="columna" (click)="goArm()">ARMONIZACION</ion-col>
+            <ion-col class="columna" (click)="goFact()">FACTURAR</ion-col>
+          </ion-row>
+        </ion-grid> -->
+        <ul class="flex items-center justify-center border-b" style="border-color: var(--ion-color-medium); color: var(--ion-color-tertiary);">
+          <li class="mr-1" [ngClass]="nav==='1'?'-mb-px':''">
+            <a style="background-color: var(--ion-color-medium);" class="inline-block py-2 px-4 hover:text-primario font-semibold"  [ngClass]="nav==='1'?'border-l border-t border-r rounded-t':''" routerLink="/tabs/home">INICIO</a>
+          </li>
+          <li class="mr-1">
+            <a style="background-color: var(--ion-color-medium);" class="inline-block py-2 px-4  hover:text-primario font-semibold" [ngClass]="nav==='2'?'border-l border-t border-r rounded-t':''" routerLink="/tabs/perfil">USUARIO</a>
+          </li>
+          <li class="mr-1">
+            <a style="background-color: var(--ion-color-medium);" class="inline-block py-2 px-4  hover:text-primario font-semibold" [ngClass]="nav==='3'?'border-l border-t border-r rounded-t':''" routerLink="/tabs/pagos">PAGAR SERVICIO</a>
+          </li>
+          <li class="mr-1">
+            <a style="background-color: var(--ion-color-medium);" class="inline-block py-2 px-4 hover:text-primario font-semibold" [ngClass]="nav==='4'?'border-l border-t border-r rounded-t':''" routerLink="/tabs/armonizacion">ARMONIZACION</a>
+          </li>
+          <li class="mr-1">
+            <a style="background-color: var(--ion-color-medium);" class="inline-block py-2 px-4 hover:text-primario font-semibold" [ngClass]="nav==='5'?'border-l border-t border-r rounded-t':''" routerLink="/tabs/facturacion">FACTURAR</a>
+          </li>
+        </ul>
+      </div>
     </div>
+    
 
     
   </ion-toolbar>

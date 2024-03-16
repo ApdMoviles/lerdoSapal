@@ -7,7 +7,7 @@ import { BehaviorSubject } from 'rxjs';
 })
 export class ConsumosService {
   dominio = 'https://apirsapal.grupoapd.mx/api/';
-  // dominio = 'https://api-sapal.azurewebsites.net/api/';
+  // dominio = 'https://localhost:44312//api/';
 
 
 

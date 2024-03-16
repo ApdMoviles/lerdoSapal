@@ -16,6 +16,11 @@ ion-buttons{
 
 img{
   width: 150px;
+  scale: 1.25;
+}
+
+.invertir{
+  filter: invert(1);
 }
 div{
   display: flex;
@@ -31,6 +36,7 @@ button-inner{
     -webkit-animation: rotate-in-center 0.6s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
 	        animation: rotate-in-center 0.6s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
 }
+
 @-webkit-keyframes rotate-in-center {
   0% {
     -webkit-transform: rotate(-360deg);
@@ -57,12 +63,14 @@ button-inner{
 }
 @media (min-width: 769px){
   .navbar{
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    align-content: center;
-    justify-content: space-evenly;
-    align-items: flex-end;
+    display: block;
+    ul{
+      li{
+        a{
+          font-size: .8vw;
+        }
+      }
+    }
   }
   .columna{
     text-align: center;

@@ -1,7 +1,10 @@
-import { Component, OnInit, Input } from '@angular/core';
-import { NavController } from '@ionic/angular';
+import { Component, OnInit, Input, input,ViewChild,ElementRef } from '@angular/core';
 import { BehaviorSubject } from 'rxjs';
 import { ThemeService } from 'src/app/services/theme.service';
+import { FormControl, FormGroup, Validators } from '@angular/forms';
+import { AlertController, NavController, IonContent } from '@ionic/angular';
+import { register } from 'swiper/element';
+import { Swiper } from 'swiper/types';
 
 @Component({
   selector: 'app-header',
@@ -18,6 +21,22 @@ export class HeaderComponent implements OnInit {
   @Input() centerTitle: boolean;
   @Input() navbar: string;
 
+  @Input() nav:string;
+ 
+  swiperRef: ElementRef | undefined;
+  swiper?: Swiper;
+
+  SwiperReady() {
+    this.swiper = this.swiperRef?.nativeElement.swiper;
+  }
+  swiperSlideChanged(e: any) {
+    console.log('Diapositiva cambiada: ', e);
+    let currentIndex = e.activeIndex;
+    console.log('Índice actual de la diapositiva: ', currentIndex);
+  }
+
+  
+
   darkMode: BehaviorSubject<boolean>;
 
   constructor(private themeSvc: ThemeService,
@@ -27,6 +46,7 @@ export class HeaderComponent implements OnInit {
     this.color="primary-gradient"
     this.darkMode = this.themeSvc.darkMode
     this.perfil || this.backButton ? this.transparent=undefined : this.transparent = "a"
+    console.log(this.nav)
   }
 
   setTheme(darkMode: boolean) {

@@ -11,7 +11,9 @@
 
 /* Core CSS required for Ionic components to work properly */
 @import "@ionic/angular/css/core.css";
-
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 /* Basic CSS for apps built with Ionic */
 @import "@ionic/angular/css/normalize.css";
 @import "@ionic/angular/css/structure.css";
@@ -26,11 +28,6 @@
 @import "@ionic/angular/css/flex-utils.css";
 @import url('https://fonts.googleapis.com/css?family=Poppins:700|Poppins:400');
 
-////////ESTILOS GRISES PARA LA APLICACION/////////////////
-  body{
-    filter: grayscale(1);
-  }
-//////////////////////////////////////////////////////////
 @media (min-width: 769px){
   ion-toolbar{
     margin-bottom: 0px !important; 
@@ -52,6 +49,13 @@ ion-card{
   width: 90vw;
   margin-bottom: 5px;
 }
+
+// .invert{
+//   filter: invert(1);
+// }
+// .normal{
+//   filter: invert(0) !important;
+// }
 
 body {
   font-family: 'Poppins';

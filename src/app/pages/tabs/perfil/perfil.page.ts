@@ -36,6 +36,9 @@ export class perfilPage implements OnInit {
   apellidosUsuario:string;
 
   ngOnInit() {
+    this.usuario="";
+    this.correo="";
+    this.telefono="";
     this.usuario = localStorage.getItem("LUS_USUARIO")
     this.correo = localStorage.getItem("LUS_CORREO")
     this.telefono = localStorage.getItem("LUS_TELEFONO")

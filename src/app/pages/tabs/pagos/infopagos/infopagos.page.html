@@ -25,15 +25,15 @@
             <h3 style="padding-bottom: 10px;"><b>ESTATUS:</b> {{estatus}}</h3>
           </div>
           <h2 style="padding-bottom: 8px; text-align: center;"><b>CONCEPTOS:</b></h2>
-          <div class="separacion">
-            <h3 style="padding-bottom: 8px; text-align: left;"><b>ADEUDOS:</b>{{adeudos | currency}}</h3>
-            <h3 style="padding-bottom: 8px; text-align: left;"><b>EXTRACCIÓN:</b>{{extraccion | currency}}</h3>
-            <h3 style="padding-bottom: 8px; text-align: left;"><b>USO DE DRENAJE:</b> {{uso_drenaje | currency}}</h3>
-            <h3 style="padding-bottom: 10px; text-align: left;"><b>RECARGOS:</b>{{recargos | currency}}</h3>
-            <h3 style="padding-bottom: 10px; text-align: left;"><b>SUBSIDIO:</b>{{subsidio | currency}}</h3>
-            <h3 style="padding-bottom: 10px; text-align: left;"><b>DESCUENTO INSEN:</b>{{descuento_insen | currency}}</h3>
-            <h3 style="padding-bottom: 10px; text-align: left;"><b>CRÉDITO POR REDONDEO:</b> {{credito_redondeo | currency}}</h3>
-            <h3 style="padding-bottom: 10px; text-align: left;"><b>CÁRGO POR REDONDEO:</b>{{cargo_redondeo | currency}} </h3>
+          <div class="grid grid-cols-2" >
+            <h3><b>ADEUDOS:</b></h3>              <h3 class="text-right pr-5">{{adeudos | currency}}</h3>
+            <h3><b>EXTRACCIÓN:</b></h3>           <h3 class="text-right pr-5">{{extraccion | currency}}</h3>
+            <h3><b>USO DE DRENAJE:</b></h3>       <h3 class="text-right pr-5"> {{uso_drenaje | currency}}</h3>
+            <h3><b>RECARGOS:</b></h3>             <h3 class="text-right pr-5">{{recargos | currency}}</h3>
+            <h3><b>SUBSIDIO:</b></h3>             <h3 class="text-right pr-5">{{subsidio | currency}}</h3>
+            <h3><b>DESCUENTO INSEN:</b></h3>      <h3 class="text-right pr-5">{{descuento_insen | currency}}</h3>
+            <h3><b>CRÉDITO POR REDONDEO:</b></h3> <h3 class="text-right pr-5"> {{credito_redondeo | currency}}</h3>
+            <h3><b>CÁRGO POR REDONDEO:</b></h3>   <h3 class="text-right pr-5">{{cargo_redondeo | currency}} </h3>
           </div>
           <div id="passwordHelpBlock"  style ="text-align: justify;" ><b> <br> {{mensaje}}</b>
           </div>
